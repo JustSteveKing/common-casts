@@ -10,18 +10,24 @@ final class Email
 {
     public function __construct(
         private readonly string $value,
-    ) {}
+    ) {
+    }
 
     public function get(): string
     {
         return $this->value;
     }
 
-    public function validates(string $rule = 'email')
+    public function validates(string $rule = 'email'): bool
     {
-        return Validator::make(
+        /**
+         * @var \Illuminate\Validation\Validator $validator
+         */
+        $validator = Validator::make(
             data: ['email' => $this->get()],
             rules: ['email' => ['required', $rule]],
-        )->passes();
+        );
+
+        return $validator->passes();
     }
 }
