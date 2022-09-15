@@ -1,6 +1,6 @@
 {
     "name": "juststeveking/common-casts",
-    "description": "A PHP package that provides common Data and Value Objects, that are Larvavel castable.",
+    "description": "A PHP package that provides common Data and Value Objects, that are Laravel castable.",
     "license": "MIT",
     "authors": [
         {
