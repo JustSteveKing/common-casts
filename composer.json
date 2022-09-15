@@ -1,0 +1,52 @@
+{
+    "name": "juststeveking/common-casts",
+    "description": "A PHP package that provides common Data and Value Objects, that are Larvavel castable.",
+    "license": "MIT",
+    "authors": [
+        {
+            "role": "Developer",
+            "name": "Steve McDougall",
+            "email": "juststevemcd@gmail.com",
+            "homepage": "https://www.juststeveking.uk/"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "JustSteveKing\\CommonCasts\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JustSteveKing\\CommonCasts\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.1",
+        "orchestra/testbench": "^7.7",
+        "pestphp/pest": "^1.21",
+        "phpstan/phpstan": "^1.8"
+    },
+    "scripts": {
+        "test": "./vendor/bin/pest",
+        "pint": "./vendor/bin/pint",
+        "stan": "./vendor/bin/phpstan analyse"
+    },
+    "scripts-description": {
+        "test": "Run the Pest test suite.",
+        "pint": "Run Laravel Pint to fix any code style issues.",
+        "stan": "Run PHPStan static analysis on the code base."
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
