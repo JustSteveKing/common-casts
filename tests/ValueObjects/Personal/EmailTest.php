@@ -45,3 +45,13 @@ it('can customise the email validation rule', function (string $email) {
         ),
     )->toBeBool()->toEqual(false);
 })->with('fakeEmails');
+
+it('can turn the value object to a string', function (string $email) {
+    $object = new Email(
+        value: $email,
+    );
+
+    expect(
+        (string) $object,
+    )->toBeString()->toEqual($email);
+})->with('emails');

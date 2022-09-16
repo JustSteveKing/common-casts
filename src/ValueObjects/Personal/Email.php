@@ -5,8 +5,9 @@ declare(strict_types=1);
 namespace JustSteveKing\CommonCasts\ValueObjects\Personal;
 
 use Illuminate\Support\Facades\Validator;
+use JustSteveKing\CommonCasts\Contracts\ValueObjectContract;
 
-final class Email
+final class Email implements ValueObjectContract
 {
     public function __construct(
         private readonly string $value,
@@ -29,5 +30,10 @@ final class Email
         );
 
         return $validator->passes();
+    }
+
+    public function __toString(): string
+    {
+        return $this->get();
     }
 }
