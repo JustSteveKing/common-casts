@@ -21,7 +21,8 @@
         }
     },
     "require": {
-        "php": "^8.1"
+        "php": "^8.1",
+        "moneyphp/money": "^4.0"
     },
     "require-dev": {
         "laravel/pint": "^1.1",
