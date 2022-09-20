@@ -19,7 +19,7 @@ final class Money implements ValueObjectContract
         private readonly Currency $currency,
     ) {}
 
-    public function validates(string $rule): bool
+    public function validates(string $rule = 'integer'): bool
     {
         /**
          * @var \Illuminate\Validation\Validator $validator
